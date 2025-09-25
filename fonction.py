@@ -51,9 +51,9 @@ def produit_moins_chers():
 #Bonus
 def check_if_luxe(produit):
     if produit[1] > 1000:
-        return produit[0] + " coute " + str(produit[1]) + " DH(luxe)"
+        return f" {produit[0]}  coute {str(produit[1])} DH(luxe)"
     else: 
-       return produit[0] + " coute "+ str(produit[1]) + " DH"
+       return f" {produit[0]} coute {str(produit[1])}  DH"
 
 def transformation_en_str():
    list_chaine= list(map(check_if_luxe, produit_prix))
