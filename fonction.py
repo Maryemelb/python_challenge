@@ -1,4 +1,5 @@
 import produit as p
+from functools import reduce
 
 produit_prix =[]
 #Associer chaque produit a son prix
@@ -17,3 +18,11 @@ def produit_sup_30():
      global produit_prix
      produit_chere= list(filter(sup30, produit_prix))
      return produit_chere
+def transformation_en_str():
+    for product in produit_prix:
+        print(product[0], "coute", product[1], "DH")
+def ordre_croissant():
+    global produit_prix
+    print(produit_prix)
+    produit_prix.sort(key=lambda x: x[1])
+    return produit_prix
